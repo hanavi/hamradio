@@ -1,0 +1,6 @@
+cat ALL.TXT |grep -i transmitting |awk {print $6} |sort |uniq > tmp2.txt
+
+for call in $(cat tmp.txt)
+do
+  grep ${call} ALL.txt |grep KC4AAA > tmpdir/${call}.txt
+done
